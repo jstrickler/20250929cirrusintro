@@ -5,8 +5,11 @@ set1 = set(data1)
 set2 = set(data2)
 
 # add elements to set (ignored if already in set)
-set1.add('taupe')  
+set1.add('taupe') 
 set2.add('blue')
+set2.add('black')
+set2.add('black')
+set2.add('black')
 set2.add('black')
 
 print(f"{set1 = }")
@@ -24,5 +27,9 @@ with open('../DATA/breakfast.txt') as breakfast_in:
 print(f"{food = }")
 print()
 
-unique_food = set(food)  # Create set from iterable (e.g., list)
+unique_food = sorted(set(food))  # Create set from iterable (e.g., list)
 print(f"{unique_food = }")
+
+for i in range(5):
+    print(set2.pop())
+print(f"{set2 = }")
